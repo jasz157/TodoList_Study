@@ -2,6 +2,10 @@ div {
     border: solid 1px; 
 }
 
+#root {
+    border: none;
+}
+
 .container  {
     display: flex;
     justify-content: space-between;
