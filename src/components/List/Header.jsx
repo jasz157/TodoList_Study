@@ -13,16 +13,19 @@ export default function Header() {
             <span className="image" >
               <img alt="logo" style={{ mixBlendMode: "color-burn" }} src="https://icon-library.com/images/todo-icon/todo-icon-17.jpg" width="50px" height="50px" />
             </span>
+            <span style={{ width:"15%", color:"white" }}>
+              <h3>Jonnie Amaral</h3>
+            </span>
             <span className="option_item">
               <a href="/">Sair</a>
             </span>
-
+ 
 
           </div>
         </nav>
       </header>
 
-      <h1>Suas Terefas</h1>
+      <h1>Suas Terefas:</h1>
 
 
 

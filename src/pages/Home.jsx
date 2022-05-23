@@ -8,9 +8,16 @@ export default function Home() {
     const [useList ,setUseList] = useState([]);
     
      
-    const taskHandler = (task) => {
+    const addTask = (task) => {
         setUseList([...useList,task]);
     };
+
+    const deleteTask = (id) => {
+       let filteredTask = useList.filter((task) => task.id !== id);
+       setUseList(filteredTask);
+    };
+
+
 
        
 
@@ -18,18 +25,28 @@ export default function Home() {
     return (
     <>
         <Header/>
-        <Form taskHandler={taskHandler}/>
-        {useList.map((task) => {
+        <Form addTask={addTask}/>
+             <main className='content' style={{display:'flex', alignItems:"center",flexDirection:"column"}} > 
+               {useList.map((task) => {
                 return (
                 <>
-                  <div key={task.id}>
-                    <TaskItem task={task} />
+                  <div key={task.id} 
+                  style={{ 
+                  display:'flex', 
+                  justifyContent: 'space-between', 
+                  background:'whitesmoke',
+                  marginTop:"10px",
+                  width:"50%", 
+                  height:"25px"
+                  }}>
+                    <TaskItem task={task} deleteTask={deleteTask}/>
                   </div>
 
                 </>
               )
 
             })}
+            </main> 
 
     </>)
 

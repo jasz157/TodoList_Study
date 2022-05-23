@@ -1,6 +1,8 @@
-div {
-    border: solid 1px; 
+div { 
+    border-radius: 10px;
 }
+
+
 
 #root {
     border: none;
@@ -9,4 +11,5 @@ div {
 .container  {
     display: flex;
     justify-content: space-between;
+    border-radius: 0;
 }

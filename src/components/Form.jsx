@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 
-export default function Form ({taskHandler}) {
+export default function Form ({addTask}) {
     const [text,setText] = useState(null);
     const [id , setId] = useState(0);
     
@@ -13,14 +13,16 @@ export default function Form ({taskHandler}) {
     const createTask = (text) => {
         let taskObj = {text:text , id:id}
         setId(id + 1);
-        taskHandler(taskObj);
+        addTask(taskObj);
      };
 
     return (
     <>
-     
-         <input placeholder="Task" onChange={textHandler}/>
-         <button onClick={() => createTask(text)}>Add</button>
+        <div style={{ display:'flex', justifyContent:'center', marginBottom:'10px'}}>
+         <input style={{width:'25%'}} placeholder="Tarefa" onChange={textHandler}/>
+         <button onClick={() => createTask(text)}>Adicionar</button>
+        </div>
+        
     </>
     )
 }
