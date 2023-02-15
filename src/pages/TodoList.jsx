@@ -3,7 +3,7 @@ import Form from '../components/Form';
 import Header from '../components/Header/Header';
 import TaskItem from '../components/TaskItem';
 
-export default function Home() {
+export default function Todolist() {
 
   const [useList, setUseList] = useState([]);
 
@@ -37,8 +37,8 @@ export default function Home() {
                   background: 'whitesmoke',
                   marginTop: "10px",
                   width: "50vw",
-                  height:'7vh'
-                   }}>
+                  height: '7vh'
+                }}>
                 <TaskItem task={task} deleteTask={deleteTask} />
               </div>
 
