@@ -11,5 +11,6 @@ div {
 .container  {
     display: flex;
     justify-content: space-between;
-    border-radius: 0;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
 }

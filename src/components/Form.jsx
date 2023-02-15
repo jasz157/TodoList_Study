@@ -18,7 +18,7 @@ export default function Form({ addTask }) {
 
     return (
         <>
-            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '10px' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '10px' , marginTop: '20px'}}>
                 <input style={{ width: '30vw', height: '5vh' }} type='text' maxLength='30' placeholder="Tarefa" onChange={textHandler} />
                 <button onClick={() => createTask(text)}>Adicionar</button>
             </div>

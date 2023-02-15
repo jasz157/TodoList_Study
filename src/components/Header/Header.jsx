@@ -25,8 +25,6 @@ export default function Header() {
         </nav>
       </header>
 
-      <h1>Suas Terefas:</h1>
-
 
 
     </>
